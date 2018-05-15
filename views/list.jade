@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title=title
+        link(rel="stylesheet" href='/stylesheets/style.css')
+    body
+        h1=title
+        table(border='2')
+            thead
+                tr
+                    th 번호
+                    th 제목
+                    th 글쓴이
+                    th 조회수
+                    th 수정일
+            tbody
+                each board in rows
+                    tr
+                        td()=board.id
+                        td
+                            a(href='/board/read/'+board.id)= board.title
+                        td()=board.writer
+                        td()=board.hit
+                        td()=board.moddate
+            img(src="/images/test.jpg" alt="bob")
+
